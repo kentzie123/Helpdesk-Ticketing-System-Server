@@ -7,8 +7,8 @@ const generateToken = (user, res) => {
 
   res.cookie("access", token, {
     httpOnly: true,
-    secure: false, // true if using HTTPS
-    sameSite: "lax", // "None" if not same host change to "lax" for development
+    secure: true, // true if using HTTPS
+    sameSite: "None", // "None" if not same host change to "lax" for development
     maxAge: 2 * 24 * 60 * 60 * 1000 // 2 days
   });
 };
